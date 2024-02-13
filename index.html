@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.3/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="m-8">
+    <header>
+
+    </header>
+    <main>
+        <!-- main content container -->
+        <div class="flex flex-col md:flex-row gap-4">
+            <!-- shape card container -->
+            <div class="flex-1 gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <!-- triangle card -->
+                <div class="card  bg-base-100 shadow-xl">
+                    <figure><img src="./images/triangle.png" alt="Shoes" /></figure>
+                    <div class="card-body text-center">
+                      <h2 class="text-xl font-bold">Triangle</h2>
+                      <p>Area (A) = 0.5 X b X h</p>
+                      <div class="flex justify-center items-center">
+                        <input id="triangle-input-one" class="w-24 h-8 text-xl p-2 rounded-sm" type="text" placeholder="b">
+                      <span class="mr-2 ml-2">cm</span>
+                      <input id="triangle-input-two" class="w-24  h-8 text-xl p-2 rounded-sm" type="text" name="" id="" placeholder="h">
+                      <span class="mr-2 ml-2">cm</span>
+                      </div>
+                      <div class="card-actions ">
+                        <button onclick="triangle()" class="btn btn-primary w-full">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <!-- Rectangle card -->
+                <div class="card  bg-base-100 shadow-xl">
+                    <figure><img src="./images/rectangle.png" alt="Shoes" /></figure>
+                    <div class="card-body text-center">
+                      <h2 class="text-xl font-bold">Rectangle</h2>
+                      <p>Area (A) = w * I</p>
+                      <div class="flex justify-center items-center">
+                        <input id="rectangle-inputFiled-One" class="w-24 h-8 text-xl p-2 rounded-sm" type="text" placeholder="w">
+                      <span class="mr-2 ml-2">cm</span>
+                      <input id="rectangle-inputFiled-Two" class="w-24  h-8 text-xl p-2 rounded-sm" type="text" name="" id="" placeholder="I">
+                      <span class="mr-2 ml-2">cm</span>
+                      </div>
+                      <div class="card-actions ">
+                        <button onclick="rectangle()" class="btn btn-primary w-full">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <!-- Parallelogram card -->
+                <div class="card  bg-base-100 shadow-xl">
+                    <figure><img src="./images/parallelogram.png" alt="Shoes" /></figure>
+                    <div class="card-body text-center">
+                      <h2 class="text-xl font-bold">Parallelogram</h2>
+                      <p>Area (A) = b * h</p>
+                      <div class="flex justify-center items-center">
+                        <input id="parallelogram-InputFiled-One" class="w-24 h-8 text-xl p-2 rounded-sm" type="text" placeholder="b">
+                      <span class="mr-2 ml-2">cm</span>
+                      <input id="parallelogram-InputFiled-Two" class="w-24  h-8 text-xl p-2 rounded-sm" type="text" name="" id="" placeholder="h">
+                      <span class="mr-2 ml-2">cm</span>
+                      </div>
+                      <div class="card-actions ">
+                        <button onclick="parallelogram()" class="btn btn-primary w-full">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <!-- Rhombus card -->
+                <div class="card  bg-base-100 shadow-xl">
+                    <figure><img src="./images/rhombus.png" alt="Shoes" /></figure>
+                    <div class="card-body text-center">
+                      <h2 class="text-xl font-bold">Rhombus</h2>
+                      <p>Area (A) = 0.5 * d1 * d2</p>
+                      <div class="flex justify-center items-center">
+                        <input class="w-24 h-8 text-xl p-2 rounded-sm" type="text" placeholder="b">
+                      <span class="mr-2 ml-2">cm</span>
+                      <input class="w-24  h-8 text-xl p-2 rounded-sm" type="text" name="" id="" placeholder="h">
+                      <span class="mr-2 ml-2">cm</span>
+                      </div>
+                      <div class="card-actions ">
+                        <button class="btn btn-primary w-full">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <!-- Pentagon card -->
+                <div class="card  bg-base-100 shadow-xl">
+                    <figure><img src="./images/pentagon.png" alt="Shoes" /></figure>
+                    <div class="card-body text-center">
+                      <h2 class="text-xl font-bold">Rhombus</h2>
+                      <p>Area (A) = 0.5 * p * b</p>
+                      <div class="flex justify-center items-center">
+                        <input class="w-24 h-8 text-xl p-2 rounded-sm" type="text" placeholder="b">
+                      <span class="mr-2 ml-2">cm</span>
+                      <input class="w-24  h-8 text-xl p-2 rounded-sm" type="text" name="" id="" placeholder="h">
+                      <span class="mr-2 ml-2">cm</span>
+                      </div>
+                      <div class="card-actions ">
+                        <button class="btn btn-primary w-full">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <!-- Ellipse card -->
+                <div class="card  bg-base-100 shadow-xl">
+                    <figure><img src="./images/ellipse.png" alt="Shoes" /></figure>
+                    <div class="card-body text-center">
+                      <h2 class="text-xl font-bold">Ellipse</h2>
+                      <p>Area (A) =     ab</p>
+                      <div class="flex justify-center items-center">
+                        <input class="w-24 h-8 text-xl p-2 rounded-sm" type="text" placeholder="b">
+                      <span class="mr-2 ml-2">cm</span>
+                      <input class="w-24  h-8 text-xl p-2 rounded-sm" type="text" name="" id="" placeholder="h">
+                      <span class="mr-2 ml-2">cm</span>
+                      </div>
+                      <div class="card-actions ">
+                        <button class="btn btn-primary w-full">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+               
+            </div>
+            <!-- area calculation container -->
+            <div class="w-96 border-2 border-gray-700 rounded-md">
+                <h3 class="text-3xl text-center p-4">Area Calculation</h3>
+            <h1>Result: <span id="result"></span> cm</h1>
+            </div>
+        </div>
+    </main>
+    <script>
+        // triangles calculation
+        const triangleInputFiledOne = document.getElementById('triangle-input-one')
+        const triangleInputFiledTwo = document.getElementById('triangle-input-two')
+        const result = document.getElementById('result')
+        function triangle () {
+            const triangleInputFiledOneResult = triangleInputFiledOne.value
+            const triangleInputFiledTwoResult = triangleInputFiledTwo.value
+            const totalResult = 0.5 * parseFloat(triangleInputFiledOneResult) * parseFloat(triangleInputFiledTwoResult)
+            result.innerText = totalResult
+        }
+        // rectangle
+        const rectangleInputFiledOne = document.getElementById('rectangle-inputFiled-One')
+        const rectangleInputFiledTwo = document.getElementById('rectangle-inputFiled-Two')
+        function rectangle () {
+            const rectangleInputFiledOneResult = rectangleInputFiledOne.value
+            const rectangleInputFiledTwoResult = rectangleInputFiledTwo.value
+            const totalResult = parseFloat(rectangleInputFiledOneResult) * parseFloat(rectangleInputFiledTwoResult)
+            result.innerText = totalResult
+        }
+        // parallelogram
+        const parallelogramInputFiledOne = document.getElementById('parallelogram-InputFiled-One')
+        const parallelogramInputFiledTwo = document.getElementById('parallelogram-InputFiled-Two')
+        function parallelogram () {
+            const parallelogramInputFiledOneResult = parallelogramInputFiledOne.value
+            const parallelogramInputFiledTwoResult = parallelogramInputFiledTwo.value
+            const totalResult = parseFloat(parallelogramInputFiledOneResult) * parseFloat(parallelogramInputFiledTwoResult)
+            result.innerText = totalResult
+        }
+    </script>
+</body>
+</html>
